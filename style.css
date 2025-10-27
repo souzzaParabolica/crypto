@@ -62,12 +62,12 @@ nav {
 }
 
 .connectButton,
-.tradeButtonPai {
+.tradeButtonPai, .exploreButtonPai {
     transition: all 0.2s ease;
     border: 2px solid #00bfff;
 }
 
-.tradeButtonPai:hover {
+.tradeButtonPai:hover, .exploreButtonPai:hover {
     background-color: #00bfff;
 
     button,
@@ -194,4 +194,33 @@ ul li {
     backdrop-filter: blur(10px);
     --webkit-backdrop-filter: blur(10px);
     padding: 0.5rem;
+}
+
+/* Otimizações para as animações */
+.primeiraSecao {
+    will-change: transform, opacity;
+    transform: translateZ(0);
+}
+
+.primeiraSecao h2,
+.primeiraSecao p,
+.primeiraSecao button {
+    will-change: transform, opacity;
+}
+
+/* Efeito de brilho no gradiente */
+.primeiraSecao h2 .degradeText {
+    background-size: 200% auto;
+    background-position: 200% 0%;
+    transition: background-position 0.5s ease;
+}
+
+/* Garantir que o overlay não interfira */
+.primeiraSecao .overlay {
+    pointer-events: none;
+}
+
+/* Melhorar performance */
+.primeiraSecao * {
+    transform-style: preserve-3d;
 }
