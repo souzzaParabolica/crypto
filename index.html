@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Treinos</title>
+  </head>
+  <body class="relative overflow-x-hidden">
+  <header class="flex flex-col xl:flex-row justify-center items-center w-full fixed px-[2rem] xl:px-[10rem] py-[1rem] xl:py-[2rem] text-white z-20">
+  <nav class="flex flex-col xl:flex-row justify-between items-center w-full px-5 py-5 rounded-[30px]">
+    <div class="flex flex-col xl:flex-row justify-center items-center">
+      <h1 class="font-[poppins] font-bold text-2xl text-white/90">Dipoleswap</h1>
+      <ul class="font-[poppins] font-semibold flex justify-center items-center gap-10 ml-[6rem] text-white/80 xl:flex hidden">
+        <li>Home</li>
+        <li>Trade</li>
+        <li>Earn</li>
+        <li>NFT</li>
+        <li>Bridge</li>
+      </ul>
+    </div>
+
+    <div class="z-10 flex justify-center items-center gap-8 font-[poppins] xl:flex hidden">
+      <span data-lucide="globe" class="w-5 h-5 cursor-pointer"></span>
+      <span data-lucide="bolt" class="w-5 h-5 cursor-pointer"></span>
+      <button class="connectButton text-center px-4 py-1 text-sm hover:bg-[#00bfff] hover:text-black/90 text-white/90 font-semibold">
+        Connect
+      </button>
+    </div>
+
+    <!-- Hamburger botão mobile -->
+    <button id="menu-toggle" class="xl:hidden text-white z-40">
+      <span data-lucide="menu" class="w-6 h-6"></span>
+    </button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-90 flex flex-col justify-center items-center gap-8 text-white text-xl hidden z-30">
+    <ul class="flex flex-col gap-6 text-center">
+      <li>Home</li>
+      <li>Trade</li>
+      <li>Earn</li>
+      <li>NFT</li>
+      <li>Bridge</li>
+    </ul>
+    <div class="flex gap-6 mt-6">
+      <span data-lucide="globe" class="w-6 h-6 cursor-pointer"></span>
+      <span data-lucide="bolt" class="w-6 h-6 cursor-pointer"></span>
+    </div>
+    <button class="connectButton mt-6 px-6 py-2 text-sm hover:bg-[#00bfff] hover:text-black/90 text-white font-semibold">
+      Connect
+    </button>
+  </div>
+</header>
+    <section
+      class="primeiraSecao w-full h-screen flex flex-col justify-center items-start px-[2rem] xl:px-[10rem] gap-7 relative"
+    >
+      <h2
+        class="z-10 text-5xl md:text-6xl xl:text-7xl leading-[60px] md:leading-[70px] xl:leading-[80px] text-white/90 font-bold max-w-[90%] md:max-w-[70%] xl:max-w-[50%] mt-[6rem] xl:mt-[7rem] px-4 py-2 break-words"
+      >
+        <span class="degradeText font-bold">
+          Data</span> is your inexhaustible assets
+        
+      </h2>
+
+      <p
+        class="z-10 xl:w-[50%] text-white/80 font-[poppins] text-sm rounded-md px-4 py-2"
+      >
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque quam
+        enim tenetur odio eos obcaecati, expedita iste.
+      </p>
+
+      <button class="degradeButton z-10 text-white/90">CONNENT WALLET</button>
+
+      <div
+        class="overlay bg-black/20 absolute top-0 left-0 w-full h-screen"
+      ></div>
+    </section>
+
+    <div class="deg relative">
+      <div
+        class="degSection flex flex-col justify-center items-center gap-[2rem]"
+      >
+        <h2
+          class="text-white/90 text-5xl font-bold flex justify-center items-center mt-[10rem] px-[2rem] xl:px-[10rem] xl:text-center font-[poppins]"
+        >
+          XXXX makes your data worth its value
+        </h2>
+        <p
+          class="xl:text-center text-white/80 font-[poppins] text-sm px-[2rem] xl:px-[25%] font-[poppins]"
+        >
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque quam
+          enim tenetur odio eos obcaecati, expedita iste.
+        </p>
+        <div class="tradeButtonPai flex justify-center items-center">
+          <button
+            class="tradeButton text-white/90 font-[poppins] font-semibold h-[50px] w-[100px] flex justify-center items-center text-center px-4 py-1 text-sm"
+          >
+            TRADE
+          </button>
+          <span
+            data-lucide="chevron-right"
+            class="h-[50px] w-[50px] p-3 text-white bg-[#37bec04e]"
+          ></span>
+        </div>
+      </div>
+
+      <div
+        class="cards flex flex-col xl:flex-row justify-center items-center gap-[3rem] xl:px-[10rem] py-[5rem]"
+      >
+        <div
+          class="card card1 h-[50vh] flex flex-col justify-end gap-2 items-center w-[80%] xl:w-[20%] relative"
+        >
+          <p class="text-white/80 font-[poppins] text-sm font-semibold">
+            Total Supply
+          </p>
+          <p
+            class="text-white/90 font-[poppins] text-4xl xl:text-2xl font-bold mb-5"
+          >
+            255,080,266
+          </p>
+
+          <div class="overlay absolute top-0 left-0 w-full h-[100%]"></div>
+        </div>
+
+        <div
+          class="card card2 h-[50vh] flex flex-col justify-end gap-2 items-center w-[80%] xl:w-[20%] relative"
+        >
+          <p class="text-white/80 font-[poppins] text-sm font-semibold">
+            Market Cap
+          </p>
+          <p
+            class="text-white/90 font-[poppins] text-4xl xl:text-2xl font-bold mb-5"
+          >
+            332,372,544
+          </p>
+
+          <div class="overlay absolute top-0 left-0 w-full h-[100%]"></div>
+        </div>
+
+        <div
+          class="card card3 h-[50vh] flex flex-col justify-end gap-2 items-center w-[80%] xl:w-[20%] relative"
+        >
+          <p class="text-white/80 font-[poppins] text-sm font-semibold">TVL</p>
+          <p
+            class="text-white/90 font-[poppins] text-4xl xl:text-2xl font-bold mb-5"
+          >
+            $4.20b
+          </p>
+
+          <div class="overlay absolute top-0 left-0 w-full h-[100%]"></div>
+        </div>
+
+        <div
+          class="card card4 h-[50vh] flex flex-col justify-end gap-2 items-center w-[80%] xl:w-[20%] relative"
+        >
+          <p class="text-white/80 font-[poppins] text-sm font-semibold">
+            Price
+          </p>
+          <p
+            class="text-white/90 font-[poppins] text-4xl xl:text-2xl font-bold mb-5"
+          >
+            $2.52m
+          </p>
+
+          <div class="overlay absolute top-0 left-0 w-full h-[100%]"></div>
+        </div>
+      </div>
+    </div>
+
+    <section
+      class="segundaSecao w-full xl:h-screen flex flex-col xl:justify-center items-start px-[2rem] xl:px-[10rem] py-[3rem] relative"
+    >
+      <div class="overlayBlack absolute top-0 left-0 w-full h-[100%]"></div>
+      <div class="flex flex-col gap-5">
+      <h2 class="z-10 text-5xl leading-[50px] xl:text-7xl xl:leading-[80px] text-white/90 font-bold xl:w-[50%]">
+        Earn passive income with crypto
+      </h2>
+      <p class="z-10 xl:w-[50%] text-white/80 font-[poppins] text-sm">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque quam
+        enim tenetur odio eos obcaecati, expedita iste.
+      </p>
+      <div class="z-10 w-[40%] xl:w-[150px] tradeButtonPai flex justify-center items-center">
+        <button
+          class="tradeButton text-white/90 font-[poppins] font-semibold h-[50px] w-[100px] flex justify-center items-center text-center px-4 py-1 text-sm"
+        >
+          TRADE
+        </button>
+        <span
+          data-lucide="chevron-right"
+          class="h-[50px] w-[50px] p-3 text-white bg-[#37bec04e]"
+        ></span>
+      </div>
+
+      <div class="w-[90%] max-w-6xl z-10">
+        <!-- Tabs -->
+        <div class="relative flex gap-6 border-b border-white/20 mb-6">
+          <button
+            class="tab-btn text-white pb-2 transition-all"
+            data-tab="syrup"
+          >
+            Top Syrup pools
+          </button>
+          <button
+            class="tab-btn text-white/50 pb-2 transition-all"
+            data-tab="farms"
+          >
+            Top Farms
+          </button>
+
+          <!-- Linha móvel -->
+          <span
+            id="tab-underline"
+            class="absolute bottom-0 h-0.5 bg-white transition-all duration-300"
+          ></span>
+        </div>
+
+        <!-- Conteúdo das Tabs -->
+        <div
+          id="tab-syrup"
+          class="tab-content grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
+        >
+          <div class="farm-card p-6 opacity-0 translate-y-6">
+            <p class="text-sm text-white/70 mb-2">TokenA–TokenB LP</p>
+            <p class="text-3xl font-bold mb-1 text-white/90">259.848%</p>
+            <span class="text-xl font-semibold degradeText">ARP</span>
+          </div>
+          <div class="farm-card p-6 opacity-0 translate-y-6">
+            <p class="text-sm text-white/70 mb-2">TokenC–TokenD LP</p>
+            <p class="text-3xl font-bold mb-1 text-white/90">198.432%</p>
+            <span class="text-xl font-semibold degradeText">ARP</span>
+          </div>
+          <div class="farm-card p-6 opacity-0 translate-y-6">
+            <p class="text-sm text-white/70 mb-2">TokenE–TokenF LP</p>
+            <p class="text-3xl font-bold mb-1 text-white/90">310.125%</p>
+            <span class="text-xl font-semibold degradeText">ARP</span>
+          </div>
+          <div class="farm-card p-6 opacity-0 translate-y-6">
+            <p class="text-sm text-white/70 mb-2">TokenG–TokenH LP</p>
+            <p class="text-3xl font-bold mb-1 text-white/90">275.876%</p>
+            <span class="text-xl font-semibold degradeText">ARP</span>
+          </div>
+        </div>
+
+        <div
+          id="tab-farms"
+          class="tab-content hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
+        >
+          <div class="farm-card p-6 opacity-0 translate-y-6">
+            <p class="text-sm text-white/70 mb-2">TokenI–TokenJ LP</p>
+            <p class="text-3xl font-bold mb-1 text-white/90">210.432%</p>
+            <span class="text-xl font-semibold degradeText">ARP</span>
+          </div>
+          <div class="farm-card p-6 opacity-0 translate-y-6">
+            <p class="text-sm text-white/70 mb-2">TokenK–TokenL LP</p>
+            <p class="text-3xl font-bold mb-1 text-white/90">180.999%</p>
+            <span class="text-xl font-semibold degradeText">ARP</span>
+          </div>
+          <div class="farm-card p-6 opacity-0 translate-y-6">
+            <p class="text-sm text-white/70 mb-2">TokenM–TokenN LP</p>
+            <p class="text-3xl font-bold mb-1 text-white/90">330.214%</p>
+            <span class="text-xl font-semibold degradeText">ARP</span>
+          </div>
+          <div class="farm-card p-6 opacity-0 translate-y-6">
+            <p class="text-sm text-white/70 mb-2">TokenO–TokenP LP</p>
+            <p class="text-3xl font-bold mb-1 text-white/90">295.876%</p>
+            <span class="text-xl font-semibold degradeText">ARP</span>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <section class="w-full min-h-screen flex flex-col justify-center items-center px-4 sm:px-8 lg:px-16 py-8 gap-7 relative">
+  <div class="relative overflow-hidden h-64 sm:h-80 md:h-96 rounded-xl shadow-2xl w-full max-w-6xl mx-auto">
+    <!-- Slide 1 -->
+    <div class="carousel-slide active gradient-bg rounded-xl">
+      <div class="h-full flex items-center justify-center px-4 sm:px-6 lg:px-8">
+        <div class="text-white text-center lg:text-left max-w-4xl w-full">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 leading-tight">
+            Make it easy to make your crypto work for you.
+          </h2>
+          <p class="text-base sm:text-lg md:text-xl mb-4 sm:mb-6 max-w-2xl mx-auto lg:mx-0">
+            Maximize seus investimentos em criptomoedas com nossa plataforma intuitiva.
+          </p>
+          <button class="bg-white text-blue-700 font-semibold py-2 sm:py-3 px-6 sm:px-8 rounded-lg hover:bg-gray-100 transition duration-300 text-sm sm:text-base">
+            READ MORE
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="carousel-slide bg-gradient-to-r from-purple-600 to-indigo-700 rounded-xl">
+      <div class="h-full flex items-center justify-center px-4 sm:px-6 lg:px-8">
+        <div class="text-white text-center lg:text-left max-w-4xl w-full">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 leading-tight">
+            Invista com segurança e alto retorno
+          </h2>
+          <p class="text-base sm:text-lg md:text-xl mb-4 sm:mb-6 max-w-2xl mx-auto lg:mx-0">
+            Nossa tecnologia avançada garante as melhores oportunidades do mercado.
+          </p>
+          <button class="bg-white text-purple-700 font-semibold py-2 sm:py-3 px-6 sm:px-8 rounded-lg hover:bg-gray-100 transition duration-300 text-sm sm:text-base">
+            READ MORE
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="carousel-slide bg-gradient-to-r from-teal-600 to-cyan-600 rounded-xl">
+      <div class="h-full flex items-center justify-center px-4 sm:px-6 lg:px-8">
+        <div class="text-white text-center lg:text-left max-w-4xl w-full">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 leading-tight">
+            Simplifique suas operações
+          </h2>
+          <p class="text-base sm:text-lg md:text-xl mb-4 sm:mb-6 max-w-2xl mx-auto lg:mx-0">
+            Interface amigável para iniciantes e recursos avançados para experts.
+          </p>
+          <button class="bg-white text-teal-700 font-semibold py-2 sm:py-3 px-6 sm:px-8 rounded-lg hover:bg-gray-100 transition duration-300 text-sm sm:text-base">
+            READ MORE
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Controles do Carrossel -->
+    <button id="prevBtn" class="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-30 hover:bg-opacity-50 text-white p-2 sm:p-3 rounded-full transition duration-300 carousel-controls">
+      <i class="fas fa-chevron-left text-sm sm:text-base"></i>
+    </button>
+    <button id="nextBtn" class="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-30 hover:bg-opacity-50 text-white p-2 sm:p-3 rounded-full transition duration-300 carousel-controls">
+      <i class="fas fa-chevron-right text-sm sm:text-base"></i>
+    </button>
+
+    <!-- Indicadores -->
+    <div class="absolute bottom-3 sm:bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 carousel-indicators">
+      <span class="carousel-indicator w-2 h-2 sm:w-3 sm:h-3 bg-white rounded-full cursor-pointer opacity-50"></span>
+      <span class="carousel-indicator w-2 h-2 sm:w-3 sm:h-3 bg-white rounded-full cursor-pointer opacity-50"></span>
+      <span class="carousel-indicator w-2 h-2 sm:w-3 sm:h-3 bg-white rounded-full cursor-pointer opacity-50"></span>
+    </div>
+  </div>
+</section>
+
+<footer class="flex flex-col md:flex-row justify-between items-center px-4 sm:px-8 lg:px-10 xl:px-[10rem] absolute bg-[transparent] w-full py-6 md:py-10 bottom-0 gap-4 md:gap-0">
+    <h2 class="font-[poppins] font-bold text-2xl text-white/90 order-1 md:order-none">
+        Dipoleswap
+    </h2>
+    
+    <ul class="footerUl flex justify-center items-center gap-6 sm:gap-8 md:gap-10 font-[poppins] font-semibold text-white/80 order-3 md:order-none flex-wrap">
+        <li>About</li>
+        <li>Developers</li>
+        <li>Help</li>
+    </ul>
+
+    <div class="socialMedia flex justify-center items-center gap-3 sm:gap-4 order-2 md:order-none">
+        <span data-lucide="facebook" class="w-8 h-8 sm:w-10 sm:h-10 text-white/80 rounded-[50%] cursor-pointer"></span>
+        <span data-lucide="linkedin" class="w-8 h-8 sm:w-10 sm:h-10 text-white/80 rounded-[50%] cursor-pointer"></span>
+        <span data-lucide="twitter" class="w-8 h-8 sm:w-10 sm:h-10 text-white/80 rounded-[50%] cursor-pointer"></span>
+    </div>
+</footer>
+
+<!-- Botão Voltar ao Topo -->
+<button id="backToTop" class="fixed bottom-8 right-8 w-12 h-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center text-white/80 hover:bg-white/20 hover:text-white transition-all duration-300 opacity-0 invisible z-50">
+    <i data-lucide="chevron-up" class="w-5 h-5"></i>
+</button>
+
+    <script>
+      lucide.createIcons();
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
