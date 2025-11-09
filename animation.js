@@ -44,7 +44,7 @@ if (window.matchMedia("(min-width: 768px)").matches) {
         );
       },
     },
-    ">0.25" // começa um pouco depois dos blocos principais
+    ">0.85" // começa um pouco depois dos blocos principais
   );
 }
 
